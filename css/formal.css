@@ -3,22 +3,26 @@
 	height: 100%;
 }
 .header {
-    position: fixed;
     width: 100%;
     height: 20%;
-    background-color: #EDEDED;;
+    background-color: #EDEDED;
+	z-index: 10;
+	border-bottom: 2px grey solid;
 }
 .topLogo {
     position: relative;
     top: 25%;
     left: 5%;
-    width: 30%;
+    width: 40%;
     height: 50%;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 2.5em;
+	font-weight: bold;
 }
 .topMenu {
     position: absolute;
-    top: 40%;
-    left: 85%;
+    top: 7.8%;
+    left: 90%;
     width: 40px;
     height: 3px;
     background-color: black;
@@ -26,4 +30,20 @@
     border-bottom: 3px solid black;
     padding: 8px 0;
     background-clip: content-box;
+}
+.five-div {
+    position: relative;
+    top: 25%;
+    left: 20%; 
+    width: 15%;
+    height: 50%;
+    background-color: white;
+    margin: auto 5px;
+    display: inline-block;
+}
+.withoutHeader {
+	position: relative;
+	width: 100%;
+	height: 90%;
+	background-color: white;
 }

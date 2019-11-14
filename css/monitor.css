@@ -1,10 +1,34 @@
-.five-div {
-    position: relative;
-    top: 25%;
-    left: 20%; 
-    width: 15%;
-    height: 50%;
-    background-color: white;
-    margin: auto 5px;
-    display: inline-block;
+#screen {
+	position: absolute;
+	margin: 10% 20% 10% 20%;
+	width: 60%;
+	height: 60%;
+	background-image: url("../image/landscape.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#left-arrow {
+	position: absolute;
+	top: 40%;
+	left: 2%;
+	width: 180px;
+	height: 180px;
+	background-image: url("../image/arrow.png");
+	background-repeat: no-repeat;
+	transform: scaleX(-1);
+}
+#right-arrow {
+	position: absolute;
+	top: 40%;
+	right: 2%;
+	width: 180px;
+	height: 180px;
+	background-image: url("../image/arrow.png");
+	background-repeat: no-repeat;
+}
+#bottom {
+	position: relative;
+	width: 100%;
+	height: 30%;
+	background-color: grey;
 }

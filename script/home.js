@@ -51,9 +51,9 @@ function movingLeft() {
 	}, fadeInTime)
 	
 	if(number == number1) {
-		$(".cover:eq(" + number2 + ")").stop(false, true);
+		$(".cover:eq(" + number2 + ")").stop();
 	} else {
-		$(".cover:eq(" + number1 + ")").stop(false, true);
+		$(".cover:eq(" + number1 + ")").stop();
 	}
 	
 	for(var i = 0; i < 3; i++) {
