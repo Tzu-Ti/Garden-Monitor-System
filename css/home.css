@@ -1,0 +1,97 @@
+.body {
+	margin: 0;
+	height: 100%;
+}
+#left {
+	position: fixed;
+	width: 20%;
+	height: 100%;
+	margin-top: 0px;
+	box-sizing: border-box;
+	border-right: 1px grey solid;
+	float: left;
+}
+#right {
+	width: 80%;
+	height: 108%;
+	margin-top: 0px;
+	float: right;
+}
+#right1 {
+	position: relative;
+	width: 100%;
+	height: 36%;
+	background-color: #EDEDED;
+	background-image: url("../image/camera.png");
+	background-repeat: no-repeat;
+	background-position: 90%;
+}
+#right2 {
+	position: relative;
+	width: 100%;
+	height: 36%;
+	background-color: #D4D4D4;
+	background-image: url("../image/tree.png");
+	background-repeat: no-repeat;
+	background-position: 90%;
+}
+#right3	{
+	position: relative;
+	width: 100%;
+	height: 36%;
+	background-color: #EDEDED;
+	background-image: url("../image/setting.png");
+	background-repeat: no-repeat;
+	background-position: 90%;
+	background-size: 40%;
+}
+.moving {
+	cursor: pointer;
+}
+.cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0;
+	z-index: 0;
+}
+.bottomLine {
+	position: absolute;
+	top: 98%;
+	left: 0;
+	width: 0%;
+	height: 2%;
+	background-color: green;
+	z-index: 0;
+}
+#three-div {
+	width: 75%;
+	height: 249px;
+	margin: 100% auto auto auto;
+}
+.three-div {
+	width: 100%;
+	height: 83px;
+	border-bottom: 1px gray solid;
+	line-height: 83px;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 1.5em;
+}
+.funcName {
+	position: relative;
+	top: 30%;
+	left: 15%;
+	width: 20%;
+	height: 40%;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+.funcHat {
+	width: 20%;
+	border: 1px black solid;
+	background: black;
+}
