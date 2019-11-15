@@ -11,6 +11,15 @@
 	border-right: 1px grey solid;
 	float: left;
 }
+#logo {
+	width: 80%;
+	height: 300px;
+	margin: 40px auto 0 auto;
+	background-image: url("../image/logo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 #right {
 	width: 80%;
 	height: 108%;
@@ -70,7 +79,7 @@
 #three-div {
 	width: 75%;
 	height: 249px;
-	margin: 100% auto auto auto;
+	margin: 70% auto auto auto;
 }
 .three-div {
 	width: 100%;
