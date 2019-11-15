@@ -1,7 +1,3 @@
-.body {
-	margin: 0;
-	height: 100%;
-}
 #left {
 	position: fixed;
 	width: 20%;
@@ -19,7 +15,6 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-
 #right {
 	width: 80%;
 	height: 108%;
@@ -54,18 +49,14 @@
 	background-position: 90%;
 	background-size: 40%;
 }
-.moving {
-	cursor: pointer;
+#three-div {
+	width: 75%;
+	height: 249px;
+	margin: 0 auto auto auto;
 }
-.cover {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+.body {
+	margin: 0;
 	height: 100%;
-	background-color: black;
-	opacity: 0;
-	z-index: 0;
 }
 .bottomLine {
 	position: absolute;
@@ -76,18 +67,15 @@
 	background-color: green;
 	z-index: 0;
 }
-#three-div {
-	width: 75%;
-	height: 249px;
-	margin: 70% auto auto auto;
-}
-.three-div {
+.cover {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
-	height: 83px;
-	border-bottom: 1px gray solid;
-	line-height: 83px;
-	font-family: 'Titillium Web', sans-serif;
-	font-size: 1.5em;
+	height: 100%;
+	background-color: black;
+	opacity: 0;
+	z-index: 0;
 }
 .funcName {
 	position: relative;
@@ -103,4 +91,15 @@
 	width: 20%;
 	border: 1px black solid;
 	background: black;
+}
+.moving {
+	cursor: pointer;
+}
+.three-div {
+	width: 100%;
+	height: 83px;
+	border-bottom: 1px gray solid;
+	line-height: 83px;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 1.5em;
 }
