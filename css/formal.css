@@ -10,7 +10,6 @@
 	border-bottom: 2px grey solid;
 }
 .topLogoDiv {
-	cursor: pointer;
 	position: relative;
 	top: 10%;
 	left: 5%;
@@ -27,6 +26,7 @@
 	background-repeat: no-repeat;
 	background-position: right;
 	float: left;
+	cursor: pointer;
 }
 .topName{
 	position: relative;
@@ -42,6 +42,7 @@
 	letter-spacing: 2px;
 	font-size: 2em;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 .topMenu {
@@ -117,9 +118,10 @@ a:active {
 	width: 35%;
 	height: 80%;
 	float: right;
-	font-family: 'Titillium Web', sans-serif;
+	font-family: 'Titillium Web', sans-serif, Microsoft JhengHei;
 	font-size: 1em;
 	text-align: right;
+	color: grey;
 }
 .popDiv {
 	position: absolute;
@@ -190,9 +192,42 @@ a:active {
 #popDiv3 {
 	background-color: #D4D4D4;
 }
+#popDivImage3 {
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	top: 40%;
+	background-image: url("../image/event.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	display: none;
+}
 #popDiv4 {
 	background-color: #EDEDED;
 }
+#popDivImage4 {
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	top: 40%;
+	background-image: url("../image/setting.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	display: none;
+}
 #popDiv5 {
 	background-color: #D4D4D4;
+}
+#popDivImage5 {
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	top: 40%;
+	background-image: url("../image/contact.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	display: none;
 }

@@ -3,6 +3,9 @@ function enterSmallDiv() {
 	$(this).find(".popDivName").stop();
 	$(this).find("#popDivImage1").stop();
 	$(this).find("#popDivImage2").stop();
+	$(this).find("#popDivImage3").stop();
+	$(this).find("#popDivImage4").stop();
+	$(this).find("#popDivImage5").stop();
 	
 	$(this).find(".popDivName").animate({
 		"top": "15%"
@@ -11,13 +14,20 @@ function enterSmallDiv() {
 		"width": "toggle"
 	});
 	$(this).find("#popDivImage2").fadeToggle(500);
-	
+	$(this).find("#popDivImage3").fadeToggle(500);
+	$(this).find("#popDivImage4").fadeToggle(500);
+	$(this).find("#popDivImage5").animate({
+		"width": "toggle"
+	});
 	
 };
 function leaveSmallDiv() {
 	$(this).find(".popDivName").stop(true);
 	$(this).find("#popDivImage1").stop(true);
 	$(this).find("#popDivImage2").stop(true);
+	$(this).find("#popDivImage3").stop(true);
+	$(this).find("#popDivImage4").stop(true);
+	$(this).find("#popDivImage5").stop(true);
 	
 	$(this).find(".popDivName").animate({
 		"top": "30%"
@@ -26,6 +36,11 @@ function leaveSmallDiv() {
 		"width": "toggle"
 	});
 	$(this).find("#popDivImage2").fadeToggle(500);
+	$(this).find("#popDivImage3").fadeToggle(500);
+	$(this).find("#popDivImage4").fadeToggle(500);
+	$(this).find("#popDivImage5").animate({
+		"width": "toggle"
+	});
 };
 var change = 0;
 function popDiv() {
@@ -52,7 +67,10 @@ function popDiv() {
 }
 
 $(function() {
-    $(".topLogoDiv").bind("click", function() {
+    $(".topCompanyName").bind("click", function() {
+        location.href = "index.html";
+    });
+	$(".topLogo").bind("click", function() {
         location.href = "index.html";
     });
     $(".popDivSmall").bind("click", function() {
