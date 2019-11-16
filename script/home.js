@@ -68,12 +68,12 @@ function movingLeft() {
 	fadein(number1, number2);
 };
 function movingRight() {
-	$(this).stop(true, true);
+	$(this).stop(true);
 	$(this).animate({
 		"background-position": "90%"
 	}, fadeOutTime);
-	$(".cover").stop(true, true);
-	$(".bottomLine").stop(true, true);
+	$(".cover").stop(true);
+	$(".bottomLine").stop(true);
 	$(".bottomLine:eq(" + number + ")").css({
 		"width": "0%"
 	});
