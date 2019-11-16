@@ -11,22 +11,7 @@ function enterSmallDiv() {
 		"width": "toggle"
 	});
 	$(this).find("#popDivImage2").fadeToggle(500);
-	var popDivImage2Rotate = 0;
-	scale = setInterval(function() {
-		console.log(popDivImage2Rotate);
-		if(popDivImage2Rotate == 0) {
-			$(this).find("#popDivImage2").css({
-				"background-image": "url('../image/watering1.png')"
-			});	
-			popDivImage2Rotate = 1;
-		}
-		else {
-			$(this).find("#popDivImage2").css({
-				"background-image": "url('../image/watering2.png')"
-			});	
-			popDivImage2Rotate = 0;
-		}
-	}, 500)
+	
 	
 };
 function leaveSmallDiv() {
@@ -41,7 +26,6 @@ function leaveSmallDiv() {
 		"width": "toggle"
 	});
 	$(this).find("#popDivImage2").fadeToggle(500);
-	clearInterval(scale);
 };
 
 $(function() {
