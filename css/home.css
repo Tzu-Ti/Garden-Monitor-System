@@ -54,6 +54,15 @@
 	height: 249px;
 	margin: 0 auto auto auto;
 }
+.login {
+	position: absolute;
+	top: 25%;
+	left: 35%;
+	width: 30%;
+	height: 50%;
+	background-color: green;
+	display: none;
+}
 .body {
 	margin: 0;
 	height: 100%;

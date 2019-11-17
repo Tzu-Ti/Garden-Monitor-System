@@ -101,4 +101,7 @@ $(function() {
 	$(".moving:eq(2)").bind("click", function () {
 		location.href = "setting.html";
 	});
+	$("#testButton").bind("click", function() {
+		$(".login").toggle(500);
+	});
 });
