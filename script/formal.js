@@ -80,13 +80,13 @@ $(function() {
                 location.href = "monitor.html";
                 break;
             case "popDiv2":
-                location.href = "http://google.com";
+                location.href = "water.html";
                 break;
             case "popDiv3":
                 location.href = "http://google.com";
                 break;
             case "popDiv4":
-                location.href = "http://google.com";
+                location.href = "setting.html";
                 break;
             case "popDiv5":
                 location.href = "http://google.com";

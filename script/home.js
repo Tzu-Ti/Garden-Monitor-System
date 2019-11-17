@@ -40,7 +40,6 @@ function movingLeft() {
 	var numbers = [0, 1, 2];
 	var currentID = $(this).attr("id");
 	number = currentID.split("")[5] - 1;
-	console.log(number);
 	
 	$(this).stop();
 	$(this).animate({
@@ -61,7 +60,6 @@ function movingLeft() {
 			numbers.splice(i, 1);
 		}
 	}
-	console.log(numbers);
 	number1 = numbers[0];
 	number2 = numbers[1];
 	

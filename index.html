@@ -1,3 +1,8 @@
+<?php
+	session_start();
+	$_SESSION["haha"] = 1;
+?>
+
 <!DOCTYPE html>
 <html style="height: 100%">
 	<head>
@@ -11,6 +16,9 @@
 	<script type="text/javascript" src="script/home.js"></script>
  
 	<body class="body">
+		<?php
+			echo "Pageviews=".$_SESSION["haha"];
+		?>
 		<div id="left">
 			<div id="logo">
 			</div>
