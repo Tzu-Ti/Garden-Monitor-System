@@ -80,6 +80,10 @@ function movingRight() {
 		
 }
 
+function submitBtnClick() {
+	$(".loginForm").submit();
+}
+
 
 $(function() { 
 	$(".moving").mouseenter(movingLeft);
@@ -100,6 +104,9 @@ $(function() {
 		location.href = "setting.html";
 	});
 	$("#testButton").bind("click", function() {
+		$(".login").fadeToggle(300);
+	});
+	$("#cancel").bind("click", function() {
 		$(".login").fadeToggle(300);
 	});
 });
