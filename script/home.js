@@ -100,6 +100,6 @@ $(function() {
 		location.href = "setting.html";
 	});
 	$("#testButton").bind("click", function() {
-		$(".login").toggle(500);
+		$(".login").fadeToggle(300);
 	});
 });

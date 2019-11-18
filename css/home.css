@@ -17,14 +17,14 @@
 }
 #right {
 	width: 80%;
-	height: 108%;
+	height: 100%;
 	margin-top: 0px;
 	float: right;
 }
 #right1 {
 	position: relative;
 	width: 100%;
-	height: 36%;
+	height: 33.33%;
 	background-color: #EDEDED;
 	background-image: url("../image/camera.png");
 	background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 #right2 {
 	position: relative;
 	width: 100%;
-	height: 36%;
+	height: 33.33%;
 	background-color: #D4D4D4;
 	background-image: url("../image/tree.png");
 	background-repeat: no-repeat;
@@ -42,7 +42,7 @@
 #right3	{
 	position: relative;
 	width: 100%;
-	height: 36%;
+	height: 33.33%;
 	background-color: #EDEDED;
 	background-image: url("../image/setting.png");
 	background-repeat: no-repeat;
@@ -56,12 +56,25 @@
 }
 .login {
 	position: absolute;
-	top: 25%;
-	left: 35%;
-	width: 30%;
-	height: 50%;
-	background-color: green;
+	width: 100%;
+	height: 100%;
+	background-color: #EDEDED;
+	opacity: 0.9;
 	display: none;
+}
+.loginInputDiv {
+	width: 380px;
+	height: 460px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -230px 0 0 -190px;
+}
+.loginForm {
+	position: relative;
+	width: 100%;
+	height: 30%;
+	text-align: center;
 }
 .body {
 	margin: 0;
