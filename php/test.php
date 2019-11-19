@@ -1,3 +1,8 @@
+<?php
+	if(!isset($_COOKIE["login"])) {
+		header("Location: water.html");
+	}
+?>
 <!DOCTYPE html>
 <html style="height: 100%">
 	<head>
