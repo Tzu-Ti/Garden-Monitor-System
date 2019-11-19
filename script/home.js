@@ -93,7 +93,7 @@ $(function() {
 $(function() {
 	// go to monitor.html
 	$(".moving:eq(0)").bind("click", function() {
-		location.href = "monitor.html";
+		location.href = "monitor.php";
 	});
 	// go to water.html
 	$(".moving:eq(1)").bind("click", function () {

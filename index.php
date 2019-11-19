@@ -1,8 +1,3 @@
-<?php
-	if(!isset($_COOKIE["login"])) {
-		header("Location: water.html");
-	}
-?>
 <!DOCTYPE html>
 <html style="height: 100%">
 	<head>
@@ -16,18 +11,23 @@
 	<script type="text/javascript" src="script/home.js"></script>
  
 	<body class="body">
-		<?php
-			echo "Pageviews=".$_SESSION["haha"];
-		?>
 		<div id="left">
-			<div id="logo">
-			</div>
+			<?php
+				session_start();
+				if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) {
+					echo "<h1>".$_SESSION['name']."</h1>";
+				}
+				else {
+					echo('<button id="testButton"> Login </button>');
+				}
+			?>
+			<div class="loginDiv"></div>
+			<div id="logo"></div>
 			<div id="three-div">
 				<div class="three-div"> Features </div>
 				<div class="three-div"> News </div>
 				<div class="three-div"> Contact us </div>
 			</div>
-			<button id="testButton"> Login </button>
 		</div>
 		
 		<div id="right">
@@ -69,9 +69,9 @@
 					<img src="image/water.png" width="200px" height="200px">
 				</div>
 				<h1 style="text-align: center"> Sign in WTT MONITOR </h1>
-				<form class="loginForm">
-					<input id="email" type="text" placeholder="E-mail / Account Number" required autofocus class="loginInput" size="30"> <br>
-					<input id="password" type="password" placeholder="Password" class="loginInput" size="30"> <br>
+				<form method="post" action="php/checkUser.php" class="loginForm">
+					<input id="email" type="text" name="username" placeholder="E-mail / Account Number" required autofocus class="loginInput" size="30"> <br>
+					<input id="password" type="password" name="password" placeholder="Password" class="loginInput" size="30"> <br>
 					<button id="submit" onclick="submitBtnClick()"> Login </button>
 				</form>
 				<div style="width: 80%; height: 2px; background-color: grey; margin: 1px auto; text-align: center">

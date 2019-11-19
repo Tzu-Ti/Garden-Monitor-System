@@ -68,10 +68,10 @@ function popDiv() {
 
 $(function() {
     $(".topCompanyName").bind("click", function() {
-        location.href = "index.html";
+        location.href = "index.php";
     });
 	$(".topLogo").bind("click", function() {
-        location.href = "index.html";
+        location.href = "index.php";
     });
     $(".popDivSmall").bind("click", function() {
         var popId = $(this).attr("id");
