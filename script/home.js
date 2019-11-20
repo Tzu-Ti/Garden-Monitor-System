@@ -103,10 +103,15 @@ $(function() {
 	$(".moving:eq(2)").bind("click", function () {
 		location.href = "setting.html";
 	});
-	$("#testButton").bind("click", function() {
+	$(".loginButton").bind("click", function() {
 		$(".login").fadeToggle(300);
 	});
 	$("#cancel").bind("click", function() {
 		$(".login").fadeToggle(300);
+	});
+	$(".username").bind("click", function() {
+		if(confirm("Logout?")) {
+			location.href = "php/logout.php";
+		}
 	});
 });

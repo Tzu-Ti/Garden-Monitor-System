@@ -12,16 +12,20 @@
  
 	<body class="body">
 		<div id="left">
-			<?php
-				session_start();
-				if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) {
-					echo "<h1>".$_SESSION['name']."</h1>";
-				}
-				else {
-					echo('<button id="testButton"> Login </button>');
-				}
-			?>
-			<div class="loginDiv"></div>
+			
+			<div class="loginDiv">
+				<div style="position: absolute; top: 48%; left: 0px; width: 33.33%; height: 4%; background-color: black"></div>
+				<?php
+					session_start();
+					if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) {
+						echo "<div class='username'>".$_SESSION['name']."</div>";
+					}
+					else {
+						echo('<div class="loginButton"> login </div>');
+					}
+				?>
+				<div style="position: absolute; top: 48%; right: 0px; width: 33.33%; height: 4%; background-color: black"></div>
+			</div>
 			<div id="logo"></div>
 			<div id="three-div">
 				<div class="three-div"> Features </div>
@@ -71,7 +75,7 @@
 				<h1 style="text-align: center"> Sign in WTT MONITOR </h1>
 				<form method="post" action="php/checkUser.php" class="loginForm">
 					<input id="email" type="text" name="username" placeholder="E-mail / Account Number" required autofocus class="loginInput" size="30"> <br>
-					<input id="password" type="password" name="password" placeholder="Password" class="loginInput" size="30"> <br>
+					<input id="password" type="password" name="password" placeholder="Password" class="loginInput" size="30" required> <br>
 					<button id="submit" onclick="submitBtnClick()"> Login </button>
 				</form>
 				<div style="width: 80%; height: 2px; background-color: grey; margin: 1px auto; text-align: center">

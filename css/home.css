@@ -9,11 +9,12 @@
 }
 #logo {
 	width: 80%;
-	height: 300px;
+	height: 250px;
 	margin: 40px auto 0 auto;
 	background-image: url("../image/logo.png");
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 #right {
 	width: 80%;
@@ -50,6 +51,9 @@
 	background-size: 40%;
 }
 #three-div {
+	position: absolute;
+	left: 12.5%;
+	bottom: 10%;
 	width: 75%;
 	height: 249px;
 	margin: 0 auto auto auto;
@@ -74,7 +78,37 @@
 	position: relative;
 	margin: 5px auto 0 auto;
 	width: 100%;
-	height: 10%;
+	height: 5%;
+}
+.loginButton {
+	position: absolute;
+	width: 33.33%;
+	height: 80%;
+	text-align: center;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20px;
+	left: 33.33%;
+	top: 10%;
+	cursor: pointer;
+}
+.loginButton:hover {
+	color: red;
+	text-decoration: underline;
+}
+.username {
+	position: relative;
+	width: 33.33%;
+	height: 80%;
+	text-align: center;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20px;
+	left: 33.33%;
+	top: 10%;
+	cursor: pointer;
+}
+.username:hover {
+	color: red;
+	text-decoration: underline;
 }
 .login {
 	position: absolute;
@@ -83,6 +117,7 @@
 	background-color: #EDEDED;
 	opacity: 0.9;
 	display: none;
+	font-family: 'Titillium Web', sans-serif;
 }
 .loginInputDiv {
 	width: 380px;

@@ -1,19 +1,32 @@
 <?php
+	$servername = "sql201.byethost.com";
+	$username = "b5_24743115";
+	$password = "ewqazewqaz2504";
+	$dbname = "b5_24743115_account";
+	$conn = mysql_connect($servername, $username, $password);
+	if(!$conn) {die("connect error");}
+	mysql_select_db($dbname, $conn);
+	
+
 	session_start();
 	$db_user = "admin";
 	$db_password = 'admin';
 
 	if(isset($_POST['username']) && isset($_POST['password'])){
-		if($_POST['username'] == $db_user && $_POST['password'] == $db_password){
+		$sql = "SELECT * FROM `account` WHERE `account` LIKE '".$_POST['username']."'";
+		$results = mysql_query($sql) or die("No this account");
+		$result = mysql_fetch_array($results);
+		echo $result['password'];
+		if($_POST['password'] == $result['password']){
 			$_SESSION['is_login'] = true;
-			$_SESSION['name'] = "Titi";
+			$_SESSION['name'] = $result['name'];
 			header('Location: ../index.php');
 		}
 		else{
 			$_SESSION['is_login'] = false;
-			header('Location: ../index.php?msg=登入失敗，請確認帳號密碼');
+			echo("<script> alert('Login Failed, confirm your account number or password'); location.href='../index.php';</script>");
 		}
 	}else{
-		header('Location: ../index.php?msg=請正確登入');
+		echo("<script> alert('Login Failed, confirm your account number or password'); location.href='../index.php';</script>");
 	}
 ?>
