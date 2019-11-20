@@ -1,0 +1,25 @@
+.signupDiv {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    left: 15%;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 40px;
+}
+.dataTitle {
+    font-size: larger;
+    width: 30%;
+    float: left;
+}
+.sign {
+    float: left;
+}
+.signupForm {
+    width: 60%;
+    float: left;
+}
+.signupInput {
+	font-size: 20px;
+    border-radius: 10px;
+}
+
