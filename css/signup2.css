@@ -1,0 +1,35 @@
+.signupDiv {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    left: 15%;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 40px;
+}
+.signupImage {
+	position: relative;
+	margin: 10px auto;
+	width: 450px;
+	height: 450px;
+	border: 5px solid #666;
+	border-radius: 50%;
+	background-color: green;
+}
+.signupInputDiv {
+	position: relative;
+	margin: 5px auto;
+	width: 50%;
+	height: 20%;
+	background-color: red;
+}
+.signupTitle {
+	text-align: center;
+	font-size: 3em;
+}
+.signupInput {
+	position: relative;
+	text-align: center;
+	margin-top: 10px; 
+}
+
+
