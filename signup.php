@@ -54,7 +54,7 @@
 				<div class="signupInputDiv">
 					<div class="signupTitle"> Your name </div>
 					<div class="signupInput">
-						<form method="post" class="signupForm">
+						<form method="post" class="signupForm" action="php/signupTosql.php">
 							<input type="text" id="name" style="font-size:2em; text-align:center" required autofocus>
 							<input type="text" id="confirm" style="display: none">
 						</form>

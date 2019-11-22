@@ -64,7 +64,7 @@
 .withoutHeader {
 	position: relative;
 	width: 100%;
-	height: 90%;
+	height: 110%;
 	max-height: 800px;
 	background-color: white;
 }
