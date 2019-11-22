@@ -7,10 +7,7 @@
 	if(!$conn) {die("connect error");}
 	mysql_select_db($dbname, $conn);
 	
-
 	session_start();
-	$db_user = "admin";
-	$db_password = 'admin';
 
 	if(isset($_POST['username']) && isset($_POST['password'])){
 		$sql = "SELECT * FROM `account` WHERE `account` LIKE '".$_POST['username']."'";
@@ -29,4 +26,5 @@
 	}else{
 		echo("<script> alert('Login Failed, confirm your account number or password'); location.href='../index.php';</script>");
 	}
+	mysql_close($conn);
 ?>

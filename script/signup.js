@@ -1,3 +1,7 @@
+function submitBtnClick() {
+	$(".signupForm").submit();
+}
+
 $(function() {
 	var state = 2;
 	$("form").keydown(function(event) {
@@ -27,8 +31,13 @@ $(function() {
 			}
 			else if(state==6) {
 				$(".signupTitle").text("Sex");
-				$("form").append("<input type='radio' name='sex' style='font-size:2em; text-align:center' value='female' required>Female", "<input type='radio' name='sex' style='font-size:2em; text-align:center' value='male' required>Male");
+				$("form").append("<input type='radio' name='sex' style='width:30px; height:30px; text-align:center' value='female' required><font size='6'>Female</font>", "<input type='radio' name='sex' style='width:30px; height:30px; text-align:center' value='male' required><font size='6'>Male</font>");
 				state++;
+			}
+			else if(state==7) {
+				$(".signupTitle").text("Sure To Submit?");
+				$("font").remove();
+				$("form").append("<button id='submit' onclick='submitBtnClick()'> Submit </button>");
 			}
 		}
 	});

@@ -6,20 +6,46 @@
     font-family: 'Titillium Web', sans-serif;
     line-height: 40px;
 }
-.dataTitle {
-    font-size: larger;
-    width: 30%;
-    float: left;
+.signupImage {
+	position: relative;
+	margin: 10px auto;
+	width: 450px;
+	height: 450px;
+	border: 5px solid #666;
+	border-radius: 50%;
+	background-image: url("../image/gogoro.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-.sign {
-    float: left;
+.signupInputDiv {
+	position: relative;
+	margin: 5px auto;
+	width: 50%;
+	height: 20%;
 }
-.signupForm {
-    width: 60%;
-    float: left;
+.signupTitle {
+	text-align: center;
+	font-size: 3em;
 }
 .signupInput {
-	font-size: 20px;
-    border-radius: 10px;
+	position: relative;
+	text-align: center;
+	margin-top: 10px; 
+}
+#submit {
+	width: 30%;
+	height: 50px;
+	margin-top: 5%;
+	border: 0;
+  	background-color:#003C9D;
+  	color:#fff;
+  	border-radius: 10px;
+	cursor: pointer;
+	font-size: 2em;
+}
+#submit:hover{
+  	color:#003C9D;
+  	background-color:#fff;
+	border:2px #003C9D solid;
 }
 
