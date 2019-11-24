@@ -54,10 +54,13 @@
 				<div class="signupInputDiv">
 					<div class="signupTitle"> Your name </div>
 					<div class="signupInput">
-						<form method="post" class="signupForm" action="php/signupTosql.php">
-							<input type="text" id="name" style="font-size:2em; text-align:center" required autofocus>
-							<input type="text" id="confirm" style="display: none">
-						</form>
+						<input type="text" id="name" style="font-size:2em; text-align:center;" required autofocus>
+						<input type='text' id='account' style='font-size:2em; text-align:center; display: none' required autofocus>
+						<input type='password' id='password' style='font-size:2em; text-align:center; display: none' required autofocus>
+						<input type='email' id='email' style='font-size:2em; text-align:center; display: none' required autofocus>
+						<input type='text' id='birth' style='font-size:2em; text-align:center; display: none' required autofocus placeholder='1997-12-03'>
+						<input type="text" id="confirm" style="display: none">
+							
 					</div>
 				</div>
 				

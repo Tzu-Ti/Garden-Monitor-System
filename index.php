@@ -74,8 +74,8 @@
 				</div>
 				<h1 style="text-align: center"> Sign in WTT MONITOR </h1>
 				<form method="post" action="php/checkUser.php" class="loginForm">
-					<input id="email" type="text" placeholder="E-mail / Account Number" required autofocus class="loginInput" size="30"> <br>
-					<input id="password" type="password" placeholder="Password" class="loginInput" size="30" required> <br>
+					<input id="account" name="account" type="text" placeholder="E-mail / Account Number" required autofocus class="loginInput" size="30"> <br>
+					<input id="password" name="password" type="password" placeholder="Password" class="loginInput" size="30" required> <br>
 					<button id="submit" onclick="submitBtnClick()"> Login </button>
 				</form>
 					<a href="signup.php"> Sign Up </a>
