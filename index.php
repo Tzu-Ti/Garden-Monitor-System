@@ -14,7 +14,7 @@
 		<div id="left">
 			
 			<div class="loginDiv">
-				<div style="position: absolute; top: 48%; left: 0px; width: 33.33%; height: 4%; background-color: black"></div>
+				<div style="position: absolute; top: 48%; left: 0px; width: 25%; height: 4%; background-color: black"></div>
 				<?php
 					session_start();
 					if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) {
@@ -24,7 +24,7 @@
 						echo('<div class="loginButton"> login </div>');
 					}
 				?>
-				<div style="position: absolute; top: 48%; right: 0px; width: 33.33%; height: 4%; background-color: black"></div>
+				<div style="position: absolute; top: 48%; right: 0px; width: 25%; height: 4%; background-color: black"></div>
 			</div>
 			<div id="logo"></div>
 			<div id="three-div">

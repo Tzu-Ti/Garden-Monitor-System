@@ -1,10 +1,5 @@
 <?php
-    $servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "accountdb";
-	$conn = mysqli_connect($servername, $username, $password, $dbname);
-	if(!$conn) {die("connect error");}
+    include("mysql.php");
 	mysqli_query($conn, 'SET NAMES utf8');
 	
 	$information = $_POST['Information'];

@@ -23,6 +23,7 @@ function submitBtnClick(yourname, account, password, email, birth) {
 }
 
 var yourname, account, password, email, birth, sex;
+var passwordCode = "";
 $(function() {
 	var state = 1;
 	var lastState = 1;
@@ -62,7 +63,6 @@ $(function() {
 							error: function(){ alert('Ajax request failed'); },
 							success: function(data) {
 								if(data == '1') {
-									alert("This account is useful");
 									$(".signupTitle").text("Password");
 									$("#account").css({
 										"display": "none"
@@ -71,7 +71,7 @@ $(function() {
 									$("#password").focus();
 									lastState = 3;
 								} else if (data == '2') {
-									alert("This account had already existed");
+									alert("This account has been used");
 									state--;
 								}
 							}	
@@ -84,6 +84,9 @@ $(function() {
 					if(lastState == 3) {
 						password = $("#password").val();
 						console.log(password);
+						for (var i = 0; i < password.length; i++) {
+							passwordCode += '*';
+						}
 						$("#password").css({
 							"display": "none"
 						});
@@ -116,11 +119,105 @@ $(function() {
 						$("#birth").css({
 							"display": "none"
 						});
+						$(".signupImage").css({
+							"background-image": "none"
+						});
+						var information = "Name: "+yourname+"<br>";
+						$(".signupImage").html(
+							"<ul style='list-style-type:none; font-size:1.5em; padding-left: 0px; margin-top: 15%'><li><b>Name: </b>"+yourname+"</li>"+
+							"<li><b>Account Number: </b>"+account+"</li>"+
+							"<li><b>Password: </b>"+passwordCode+"</li>"+
+							"<li><b>E-mail: </b>"+email+"</li>"+
+							"<li><b>Birthday: </b>"+birth+"</li></ul>"
+						);
 						$(".signupInput").append("<button id='submit' onclick='submitBtnClick(yourname, account, password, email, birth, sex)'> Submit </button>");
+						$("#submit").focus();
 					}
 					lastState = 6;
 					break;
 			}
 		}
+	});
+});
+
+$(function() {
+	var timer;
+	$(".img").each(function() {
+		var tag = $("<div></div>");
+		tag.attr("class", "big");
+		$(".all").append(tag);
+		var src = $(this).attr("src");
+		tag.attr("style", "background-image: url("+src+")");
+	});
+	$(".img").click(function() {
+		clearTimeout(timer);
+		$(".signupImage").css({ "border": "5px solid #666" });
+		$(".all").stop();
+		
+		var index = $(".img").index(this);
+		
+		var pos = index * -300 + 75;
+		$(".all").animate({
+			"left": pos+"px"
+		}, 2500);
+		
+		var next = index + 1;
+		if(next == $(".img").length) next=0;
+		
+		timer = setTimeout(function() {
+			$(".img")[next].click()
+		}, 3000);
+	});
+	
+	// Click the first image at the first time.
+	$(".img")[0].click();
+	
+	// Double click to lock the image
+	$(".img").dblclick(function() {
+		$(".all").stop();
+		var index = $(".img").index(this);
+		var pos = index * -300 + 75;
+		$(".all").animate({
+			"left": pos+"px"
+		}, 500);
+		
+		indexRE = index % 3;
+		console.log(indexRE);
+		switch(indexRE) {
+			case 0:
+				$(".signupImage").css({ "border": "5px solid green" });
+				break;
+			case 1:
+				$(".signupImage").css({ "border": "5px solid orange" });
+				break;
+			case 2:
+				$(".signupImage").css({ "border": "5px solid blue" });
+				break;
+		}
+		clearTimeout(timer);
+	});
+});
+
+$(function() {
+	$(".imgStyle").mouseenter(function() {
+		var index = $(".imgStyle").index(this);
+		index = index % 3;
+		console.log(index);
+		switch(index) {
+			case 0:
+				$(this).css({ "border": "5px solid green" });
+				break;
+			case 1:
+				$(this).css({ "border": "5px solid orange" });
+				break;
+			case 2:
+				$(this).css({ "border": "5px solid blue" });
+				break;
+		}
+	});
+	$(".imgStyle").mouseleave(function() {
+		$(this).css({
+			"border": "5px solid grey"
+		});
 	});
 });

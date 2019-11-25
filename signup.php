@@ -49,8 +49,31 @@
         <div class="popDivShadow"></div>
 
         <div class="withoutHeader">
+			<div id="image1" class="imgStyle">
+				<img class="img" src="image/pokemon/bulbasaur.png">
+			</div>
+			<div id="image2" class="imgStyle">
+				<img class="img" src="image/pokemon/charmander.png">
+			</div>
+			<div id="image3" class="imgStyle">
+				<img class="img" src="image/pokemon/squirtle.png">
+			</div>
+			<div id="image4" class="imgStyle">
+				<img class="img" src="image/pokemon/chikorita.png">
+			</div>
+			<div id="image5" class="imgStyle">
+				<img class="img" src="image/pokemon/cyndaquil.png">
+			</div>
+			<div id="image6" class="imgStyle">
+				<img class="img" src="image/pokemon/totodile.png">
+			</div>
             <div class="signupDiv">
-				<div class="signupImage"></div>
+				Pick The Pokemon to Represent You<br>Double Click to Lock The Pokemon
+				<div class="signupImage">
+					<div class="all">
+					
+					</div>
+				</div>
 				<div class="signupInputDiv">
 					<div class="signupTitle"> Your name </div>
 					<div class="signupInput">

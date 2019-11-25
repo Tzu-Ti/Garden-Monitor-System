@@ -7,7 +7,15 @@
 		$sql = "SELECT * FROM `account` WHERE `account` LIKE '".$_POST['account']."'";
 		$results = mysqli_query($conn, $sql) or die("No this account");
 		$result = mysqli_fetch_array($results);
+		
+		// if input is email
+		if(empty($result)) {
+			$sql = "SELECT * FROM `account` WHERE `email` LIKE '".$_POST['account']."'";
+			$results = mysqli_query($conn, $sql) or die("No this E-mail");
+			$result = mysqli_fetch_array($results);
+		}
 		echo $result['password'];
+		
 		if($_POST['password'] == $result['password']){
 			$_SESSION['is_login'] = true;
 			$_SESSION['name'] = $result['name'];
@@ -17,6 +25,7 @@
 			$_SESSION['is_login'] = false;
 			echo("<script> alert('Login Failed, confirm your account number or password'); location.href='../index.php';</script>");
 		}
+		
 	}else{
 		echo("<script> alert('Not get the number'); location.href='../index.php';</script>");
 	}
