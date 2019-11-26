@@ -7,6 +7,23 @@
     line-height: 25px;
 	text-align: center;
 }
+.synopsis {
+	position: absolute;
+	top: 0px;
+	width: 450px;
+	height: 450px;
+	text-align: center;
+	line-height: 40px;
+	background-color: white;
+	display: none;
+	z-index: 10;
+}
+.synopsisUL {
+	list-style-type:none; 
+	font-size:1.5em; 
+	padding-left: 0px; 
+	margin-top: 15%
+}
 .signupImage {
 	position: relative;
 	margin: 10px auto;
@@ -16,14 +33,12 @@
 	border-radius: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	text-align: center;
-	line-height: 50px;
 	overflow: hidden;
 }
 .all {
 	width: 1800px;
 	height: 300px;
-	position: relative;
+	position: absolute;
 	top: 75px;
 	left: 75px;
 }

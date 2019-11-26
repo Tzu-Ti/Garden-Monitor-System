@@ -69,10 +69,12 @@
 			</div>
             <div class="signupDiv">
 				Pick The Pokemon to Represent You<br>Double Click to Lock The Pokemon
-				<div class="signupImage">
-					<div class="all">
-					
-					</div>
+                <div class="signupImage">
+                    <div class="all"></div>
+                    <div class="synopsis">
+                        <ul class="synopsisUL"></ul>
+                    </div>
+                    <div style="position: absolute; bottom: 10%; width: 100%">Move Here to See What You Filled</div>
 				</div>
 				<div class="signupInputDiv">
 					<div class="signupTitle"> Your name </div>

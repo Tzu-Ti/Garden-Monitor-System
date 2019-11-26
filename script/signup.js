@@ -1,10 +1,11 @@
-function submitBtnClick(yourname, account, password, email, birth) {
+function submitBtnClick(yourname, account, password, email, birth, pokemon) {
 	var information = {
 		"name": yourname,
 		"account": account,
 		"password": password,
 		"email": email,
-		"birth": birth
+		"birth": birth,
+		"pokemon": pokemon
 	};
 	console.log(information);
 	
@@ -22,17 +23,14 @@ function submitBtnClick(yourname, account, password, email, birth) {
 	});
 }
 
-var yourname, account, password, email, birth, sex;
+var yourname, account, password, email, birth, sex, pokemon;
 var passwordCode = "";
 $(function() {
 	var state = 1;
 	var lastState = 1;
 	$("input").keydown(function(event) {
 		if(event.which == 13) {
-			console.log("state: "+state);
-			console.log("lastState: "+lastState);
 			state++;
-			console.log("enter");
 			
 			switch(state){
 				// 2: account number
@@ -41,6 +39,7 @@ $(function() {
 					if(lastState == 1) {
 						yourname = $("#name").val();
 						console.log(yourname);
+						$(".synopsisUL").append("<li><b>Name: </b>"+yourname+"</li>");
 						$("#name").css({
 							"display": "none"
 						});
@@ -63,6 +62,7 @@ $(function() {
 							error: function(){ alert('Ajax request failed'); },
 							success: function(data) {
 								if(data == '1') {
+									$(".synopsisUL").append("<li><b>Account Number: </b>" + account + "</li>");
 									$(".signupTitle").text("Password");
 									$("#account").css({
 										"display": "none"
@@ -87,6 +87,7 @@ $(function() {
 						for (var i = 0; i < password.length; i++) {
 							passwordCode += '*';
 						}
+						$(".synopsisUL").append("<li><b>Password: </b>" + passwordCode + "</li>");
 						$("#password").css({
 							"display": "none"
 						});
@@ -101,6 +102,7 @@ $(function() {
 					if(lastState == 4) {
 						email = $("#email").val();
 						console.log(email);
+						$(".synopsisUL").append("<li><b>E-mail: </b>" + email + "</li>");
 						$("#email").css({
 							"display": "none"
 						});
@@ -116,22 +118,14 @@ $(function() {
 					if(lastState == 5) {
 						birth = $("#birth").val();
 						console.log(birth);
+						$(".synopsisUL").append("<li><b>Birthday: </b>" + birth + "</li>");
 						$("#birth").css({
 							"display": "none"
 						});
 						$(".signupImage").css({
 							"background-image": "none"
 						});
-						var information = "Name: "+yourname+"<br>";
-						$(".signupImage").html(
-							"<ul style='list-style-type:none; font-size:1.5em; padding-left: 0px; margin-top: 15%'><li><b>Name: </b>"+yourname+"</li>"+
-							"<li><b>Account Number: </b>"+account+"</li>"+
-							"<li><b>Password: </b>"+passwordCode+"</li>"+
-							"<li><b>E-mail: </b>"+email+"</li>"+
-							"<li><b>Birthday: </b>"+birth+"</li></ul>"
-						);
-						$(".signupInput").append("<button id='submit' onclick='submitBtnClick(yourname, account, password, email, birth, sex)'> Submit </button>");
-						$("#submit").focus();
+						$(".signupInput").append("<button id='submit' onclick='submitBtnClick(yourname, account, password, email, birth, sex, pokemon)'> Submit </button>");
 					}
 					lastState = 6;
 					break;
@@ -176,6 +170,14 @@ $(function() {
 	$(".img").dblclick(function() {
 		$(".all").stop();
 		var index = $(".img").index(this);
+		pokemon = $(this).attr("src");
+		pokemon = pokemon.split("/");
+		pokemon = pokemon[pokemon.length-1];
+		pokemon = pokemon.split(".");
+		pokemon = pokemon[0];
+		console.log(pokemon);
+		$("#pokemon").remove();
+		$(".synopsisUL").prepend("<li id='pokemon'><b>Pokemon: </b>" + pokemon + "</li>");
 		var pos = index * -300 + 75;
 		$(".all").animate({
 			"left": pos+"px"
@@ -219,5 +221,16 @@ $(function() {
 		$(this).css({
 			"border": "5px solid grey"
 		});
+	});
+});
+
+$(function() {
+	$(".signupImage").mouseenter(function() {
+		$(".synopsis").stop()
+		$(".synopsis").fadeToggle(500);
+	});
+	$(".synopsis").mouseleave(function () {
+		$(".synopsis").stop(true)
+		$(".synopsis").fadeToggle(500);
 	});
 });
