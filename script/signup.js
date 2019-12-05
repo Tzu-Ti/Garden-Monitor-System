@@ -123,8 +123,8 @@ $(function() {
 							$("#email").css({
 								"display": "none"
 							});
-							$("#birth").slideToggle(500);
-							$("#birth").focus();
+							$(".birth").slideToggle(500);
+							$("#birth-Y").focus();
 							lastState = 5;
 						} else {
 							alert("Wrong E-mail Format");
@@ -137,10 +137,15 @@ $(function() {
 				case 6:
 					$(".signupTitle").text("Sure To Submit?");
 					if(lastState == 5) {
-						birth = $("#birth").val();
-						console.log(birth);
+						var Y = $("#birth-Y").val();
+						var M = $("#birth-M").val();
+						var D = $("#birth-D").val();
+						//birth = $(".birth").val();
+						console.log(Y);
+						console.log(M);
+						console.log(D);
 						$(".synopsisUL").append("<li><b>Birthday: </b>" + birth + "</li>");
-						$("#birth").css({
+						$(".birth").css({
 							"display": "none"
 						});
 						$(".signupImage").css({
@@ -218,6 +223,11 @@ $(function() {
 				break;
 		}
 		clearTimeout(timer);
+	});
+
+	// Click Birthday submit button
+	$("#submitBirth").click(function() {
+		console.log("CLICK!!!!!");
 	});
 });
 

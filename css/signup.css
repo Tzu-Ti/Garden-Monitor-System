@@ -35,6 +35,17 @@
 	background-size: cover;
 	overflow: hidden;
 }
+#submitBirth {
+	font-size:2em; 
+	display: none; 
+	background-color: white; 
+	border: 2px black solid; 
+	border-radius: 25px;
+	margin-left: 10px;
+}
+#submitBirth:active{
+	background:grey;
+}
 .all {
 	width: 1800px;
 	height: 300px;
@@ -55,7 +66,7 @@
 .signupInput {
 	position: relative;
 	text-align: center;
-	margin-top: 10px; 
+	margin-top: 15px;
 }
 #submit {
 	width: 30%;
