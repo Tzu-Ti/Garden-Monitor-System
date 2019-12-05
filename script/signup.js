@@ -1,4 +1,8 @@
 function submitBtnClick(yourname, account, password, email, birth, pokemon) {
+	if(pokemon.length == 0) {
+		alert("Double Click to Choose The Pokemon");
+		return 0;
+	}
 	var information = {
 		"name": yourname,
 		"account": account,
@@ -23,7 +27,17 @@ function submitBtnClick(yourname, account, password, email, birth, pokemon) {
 	});
 }
 
-var yourname, account, password, email, birth, sex, pokemon;
+function validateEmail(email) {
+	reg = /^[^\s]+@[^\s]+\.[^\s]{2,3}$/;
+	if (reg.test(email)) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+var yourname, account, password, email, birth
+var pokemon = "";
 var passwordCode = "";
 $(function() {
 	var state = 1;
@@ -98,18 +112,25 @@ $(function() {
 					break;
 				// 5: birthday
 				case 5:
-					$(".signupTitle").text("Birthday");
 					if(lastState == 4) {
 						email = $("#email").val();
-						console.log(email);
-						$(".synopsisUL").append("<li><b>E-mail: </b>" + email + "</li>");
-						$("#email").css({
-							"display": "none"
-						});
-						$("#birth").slideToggle(500);
-						$("#birth").focus();
+						var validation = validateEmail(email);
+						console.log(validation);
+						if(validation) {
+							console.log(email);
+							$(".signupTitle").text("Birthday");
+							$(".synopsisUL").append("<li><b>E-mail: </b>" + email + "</li>");
+							$("#email").css({
+								"display": "none"
+							});
+							$("#birth").slideToggle(500);
+							$("#birth").focus();
+							lastState = 5;
+						} else {
+							alert("Wrong E-mail Format");
+							state--;
+						}
 					}
-					lastState = 5;
 					break;
 				
 				// 6: submit
@@ -125,7 +146,7 @@ $(function() {
 						$(".signupImage").css({
 							"background-image": "none"
 						});
-						$(".signupInput").append("<button id='submit' onclick='submitBtnClick(yourname, account, password, email, birth, sex, pokemon)'> Submit </button>");
+						$(".signupInput").append("<button id='submit' onclick='submitBtnClick(yourname, account, password, email, birth, pokemon)'> Submit </button>");
 					}
 					lastState = 6;
 					break;

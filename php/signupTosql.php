@@ -9,8 +9,9 @@
     $password = $information['password'];
     $email = $information['email'];
     $birth = $information['birth'];
+	$pokemon = $information['pokemon'];
     
-	$sql = "INSERT INTO `account` (`name`, `account`, `password`, `email`, `birthday`) VALUES ('$name', '$account', '$password', '$email', '$birth');";
+	$sql = "INSERT INTO `account` (`name`, `account`, `password`, `email`, `birthday`, `pokemon`) VALUES ('$name', '$account', '$password', '$email', '$birth', '$pokemon');";
     $results = mysqli_query($conn, $sql) or die("Sign up failed");
 	
 ?>
