@@ -136,7 +136,7 @@
                                 <option value="1994"> 1994 </option>
                                 <option value="1995"> 1995 </option>
                                 <option value="1996"> 1996 </option>
-                                <option value="1997"> 1997 </option>
+                                <option value="1997" selected> 1997 </option>
                                 <option value="1998"> 1998 </option>
                                 <option value="1999"> 1999 </option>
                                 <option value="2000"> 2000 </option>
@@ -153,12 +153,12 @@
                                 <option value="9"> 9 </option>
                                 <option value="10"> 10 </option>
                                 <option value="11"> 11 </option>
-                                <option value="12"> 12 </option>
+                                <option value="12" selected> 12 </option>
                         </select>
                         <select id="birth-D" class="birth" style='font-size:2em; text-align:center; display: none' required>
                                 <option value="1"> 1 </option>
                                 <option value="2"> 2 </option>
-                                <option value="3"> 3 </option>
+                                <option value="3" selected> 3 </option>
                                 <option value="4"> 4 </option>
                                 <option value="5"> 5 </option>
                                 <option value="6"> 6 </option>

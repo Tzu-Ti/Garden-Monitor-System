@@ -1,4 +1,3 @@
-var scale;
 function enterSmallDiv() {
 	$(this).find(".popDivName").stop();
 	$(this).find("#popDivImage1").stop();

@@ -132,36 +132,37 @@ $(function() {
 						}
 					}
 					break;
-				
-				// 6: submit
-				case 6:
-					$(".signupTitle").text("Sure To Submit?");
-					if(lastState == 5) {
-						var Y = $("#birth-Y").val();
-						var M = $("#birth-M").val();
-						var D = $("#birth-D").val();
-						//birth = $(".birth").val();
-						console.log(Y);
-						console.log(M);
-						console.log(D);
-						$(".synopsisUL").append("<li><b>Birthday: </b>" + birth + "</li>");
-						$(".birth").css({
-							"display": "none"
-						});
-						$(".signupImage").css({
-							"background-image": "none"
-						});
-						$(".signupInput").append("<button id='submit' onclick='submitBtnClick(yourname, account, password, email, birth, pokemon)'> Submit </button>");
-					}
-					lastState = 6;
-					break;
 			}
 		}
 	});
 });
 
+// Click Birthday submit button
+$(function () {
+	$("#submitBirth").click(function () {
+		console.log("CLICK!!!!!");
+		var Y = $("#birth-Y").val();
+		var M = $("#birth-M").val();
+		var D = $("#birth-D").val();
+		birth = Y+'-'+M+'-'+D;
+		console.log(birth);
+		$(".signupTitle").text("Sure To Submit?");
+		$(".synopsisUL").append("<li><b>Birthday: </b>" + birth + "</li>");
+		$(".birth").css({
+			"display": "none"
+		});
+		$(".signupImage").css({
+			"background-image": "none"
+		});
+		$(".signupInput").append("<button id='submit' onclick='submitBtnClick(yourname, account, password, email, birth, pokemon)'> Submit </button>");
+	});
+})
+
+// Moving part of the middle big picture
 $(function() {
 	var timer;
+
+	// Add each small picture to middle picture's tag
 	$(".img").each(function() {
 		var tag = $("<div></div>");
 		tag.attr("class", "big");
@@ -169,6 +170,8 @@ $(function() {
 		var src = $(this).attr("src");
 		tag.attr("style", "background-image: url("+src+")");
 	});
+
+	// Click the surrounding small picture, middle big picture will turn to which small picture
 	$(".img").click(function() {
 		clearTimeout(timer);
 		$(".signupImage").css({ "border": "5px solid #666" });
@@ -224,13 +227,11 @@ $(function() {
 		}
 		clearTimeout(timer);
 	});
-
-	// Click Birthday submit button
-	$("#submitBirth").click(function() {
-		console.log("CLICK!!!!!");
-	});
 });
 
+
+
+// Display the color of the border when you move the mouse to the surrounding small picture
 $(function() {
 	$(".imgStyle").mouseenter(function() {
 		var index = $(".imgStyle").index(this);
@@ -255,6 +256,7 @@ $(function() {
 	});
 });
 
+// When you move the mouse to the middle big picture, it shows the filled contents
 $(function() {
 	$(".signupImage").mouseenter(function() {
 		$(".synopsis").stop()
