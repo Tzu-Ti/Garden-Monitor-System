@@ -103,6 +103,10 @@ $(function() {
 	$(".moving:eq(2)").bind("click", function () {
 		location.href = "setting.html";
 	});
+	// go to contact.php
+	$(".three-div:eq(2)").click(function() {
+		location.href = "contact.php";
+	});
 	$(".loginButton").bind("click", function() {
 		$(".login").fadeToggle(300);
 	});

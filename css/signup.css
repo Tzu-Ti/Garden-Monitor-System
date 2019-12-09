@@ -42,6 +42,7 @@
 	border: 2px black solid; 
 	border-radius: 25px;
 	margin-left: 10px;
+	cursor: pointer;
 }
 #submitBirth:active{
 	background:grey;

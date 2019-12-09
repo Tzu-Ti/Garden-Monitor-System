@@ -124,7 +124,6 @@ $(function() {
 								"display": "none"
 							});
 							$(".birth").slideToggle(500);
-							$("#birth-Y").focus();
 							lastState = 5;
 						} else {
 							alert("Wrong E-mail Format");

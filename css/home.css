@@ -185,6 +185,7 @@
 	line-height: 83px;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 1.5em;
+	cursor: pointer;
 }
 a:link{
 	text-decoration: none;

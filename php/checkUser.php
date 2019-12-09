@@ -19,6 +19,8 @@
 		if($_POST['password'] == $result['password']){
 			$_SESSION['is_login'] = true;
 			$_SESSION['name'] = $result['name'];
+			$_SESSION['email'] = $result['email'];
+			$_SESSION['pokemon'] = $result['pokemon'];
 			header('Location: ../index.php');
 		}
 		else{

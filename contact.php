@@ -15,6 +15,12 @@
 <script type="text/javascript" src="script/contact.js"></script>
 
 <body class="body">
+	<?php
+		session_start();
+		if(!isset($_SESSION['is_login']) && !$_SESSION['is_login'] == true) {
+			echo("<script> alert('Login First!!!'); location.href='../index.php';</script>");
+		}
+	?>
     <header class="header">
         <div class="topLogoDiv">
             <div class="topLogo"></div>
@@ -49,8 +55,8 @@
     <div class="popDivShadow"></div>
 
     <div class="withoutHeader">
-        <div class="contactTitle"> What you want to tell me or ask me? </div>
-        <textarea id="contactInput"></textarea>
+        <div class="contactTitle"> What you want to tell me or ask me? Press the Pokemon to send the letter. </div>
+		<textarea id="contactInput" required></textarea>
         <div class="submitDiv">
             <div class="big"></div>
         </div>
