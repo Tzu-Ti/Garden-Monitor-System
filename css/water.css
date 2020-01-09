@@ -1,0 +1,186 @@
+.field {
+    position: relative;
+    border: 3px grey solid;
+    border-radius: 40px;
+    top: 1%;
+    margin: 0% 1% 1.5% 1%;
+    width: 98%;
+    background-color: rgb(10, 223, 177);
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    filter: drop-shadow(10px 10px 3px rgba(0, 0, 0, 0.7));
+}
+.summary {
+    position: relative;
+    border: 3px grey solid;
+    border-radius: 40px;
+    background-color: rgb(145, 255, 231);
+    margin: 1%;
+    width: 98%;
+    height: 30%;
+    overflow: hidden;
+}
+.table {
+    width: 96%;
+    height: 85%;
+    margin: 1.5% 2%;
+}
+.row {
+    width: 100%;
+}
+.box {
+    border: 1px grey solid;
+}
+.daybox {
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+#detail {
+    position: absolute;
+    background-color: grey;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    line-height: 15px;
+    display: none;
+    z-index: 10;
+}
+.scheduleTitle {
+    position: relative;
+    width: 94%;
+    margin: 3%;
+    border: 3px solid grey;
+    border-radius: 40px;
+    text-align: center;
+    background-color: rgb(214, 252, 244);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+#add {
+    position: relative;
+    margin: 1%;
+    padding: 0px 10px 0px 10px;
+    border: 1px grey solid;
+    border-radius: 40px;
+    background-color: rgb(145, 255, 231);
+    text-align: center;
+    float: right;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+#add:hover {
+    font-weight: bold;
+    color: brown;
+}
+.schedule {
+    position: relative;
+    border: 3px grey solid;
+    border-radius: 40px;
+    background-color: rgb(145, 255, 231);
+    margin: 1%;
+    width: 48%;
+    height: 50%;
+    overflow: scroll;
+    float: left;
+}
+#addDay {
+    margin: 1% 1% 1% 2%;
+    background-color: rgb(145, 255, 231);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+.addTime {
+    margin: 1%;
+    background-color: rgb(145, 255, 231);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+.insideAddDiv {
+    position: relative;
+    width: 94%;
+    margin: 3%;
+    border: 3px solid grey;
+    border-radius: 40px;
+    background-color: rgb(214, 252, 244);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+.insideDiv {
+    position: relative;
+    width: 94%;
+    margin: 3%;
+    border: 3px solid grey;
+    border-radius: 40px;
+    background-color: rgb(214, 252, 244);
+    font-family: 'Titillium Web', sans-serif;
+}
+.day {
+    position: relative;
+    width: 15%;
+    font-size: 20px;
+    border-right-style: solid;
+    border-right-color: grey;
+    border-right-width: 3px;
+    text-align: center;
+    display: inline-block;
+}
+.time {
+    position: relative;
+    width: 20%;
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 3%;
+}
+.X {
+    position: relative;
+    margin: 6px;
+    width: 19px;
+    height: 19px;
+    background-image: url("../image/delete.png");
+    float: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.X:hover {
+    background-image: url("../image/deleteHover.png");
+}
+#pub {
+    position: relative;
+    border: 3px grey solid;
+    border-radius: 40px;
+    background-color: rgb(145, 255, 231);
+    margin: 1%;
+    width: 15%;
+    height: 12%;
+    float: left;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+#shadow {
+    position: relative;
+    margin: 1%;
+    width: 15%;
+    height: 22%;
+    float: left;
+    background-color: black;
+    opacity: 0.5;
+    border: 3px grey solid;
+    border-radius: 40px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    display: none;
+    color: white;
+}

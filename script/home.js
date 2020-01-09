@@ -64,6 +64,14 @@ function movingLeft() {
 	number2 = numbers[1];
 	
 	fadein(number1, number2);
+	
+	$(".note:eq("+number+")").stop();
+	$(".note:eq("+number+")").fadeToggle(fadeInTime);
+	
+	$(".funcName:eq("+number+")").stop();
+	$(".funcName:eq("+number+")").animate({
+		"top": "20%"
+	}, fadeInTime);
 };
 function movingRight() {
 	$(this).stop(true);
@@ -77,7 +85,14 @@ function movingRight() {
 	});
 	
 	fadeout(number1, number2);
-		
+	
+	$(".note:eq("+number+")").stop();
+	$(".note:eq("+number+")").fadeToggle(fadeOutTime);
+	
+	$(".funcName:eq("+number+")").stop();
+	$(".funcName:eq("+number+")").animate({
+		"top": "30%"
+	}, fadeOutTime);
 }
 
 function submitBtnClick() {
@@ -97,11 +112,19 @@ $(function() {
 	});
 	// go to water.html
 	$(".moving:eq(1)").bind("click", function () {
-		location.href = "water.html";
+		location.href = "water.php";
 	});
 	// go to setting.html
 	$(".moving:eq(2)").bind("click", function () {
-		location.href = "setting.html";
+		location.href = "setting.php";
+	});
+	// go to features.php
+	$(".three-div:eq(0)").click(function() {
+		location.href = "features.php";
+	});
+	// go to events.php
+	$(".three-div:eq(1)").click(function() {
+		location.href = "events.php";
 	});
 	// go to contact.php
 	$(".three-div:eq(2)").click(function() {

@@ -4,7 +4,7 @@
 }
 .header {
     width: 100%;
-    height: 20%;
+    height: 15%;
     background-color: #EDEDED;
 	z-index: 10;
 	border-bottom: 2px grey solid;
@@ -14,18 +14,17 @@
 	position: relative;
 	top: 10%;
 	left: 5%;
-	width: 50%;
+	width: 80%;
 	height: 80%;
 	float: left;
 }
 .topLogo {
 	position: relative;
-	width: 25%;
+	width: 10%;
 	height: 100%;
 	background-image: url("../image/water.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: right;
 	float: left;
 	cursor: pointer;
 }
@@ -37,18 +36,24 @@
 
 }
 .topCompanyName {
-	position: absolute;
-	margin-top: auto, 0px;
+	font-family: 'Titillium Web', sans-serif;
+	letter-spacing: 1px;
+	font-size: 1.3em;
+	cursor: pointer;
+}
+.topPageName {
 	font-family: 'Titillium Web', sans-serif;
 	letter-spacing: 2px;
-	font-size: 2em;
+	font-size: 2.5em;
 	font-weight: bold;
-	cursor: pointer;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
 }
 
 .topMenu {
     position: relative;
-    top: 45%;
+    top: 40%;
 	right: 5%;
     width: 30px;
     height: 3px;
@@ -65,7 +70,7 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	min-height: 670px;
+	min-height: 690px;
 	max-height: 800px;
 	background-color: white;
 }
@@ -102,10 +107,6 @@ a:link{
 	text-decoration: none;
 	color: rgb(88, 86, 86);
 }
-a:visited{
-	text-decoration: underline;
-	color: red;
-}
 a:hover {
 	text-decoration:underline;
 	color:gray;
@@ -129,7 +130,7 @@ a:active {
 }
 .popDiv {
 	position: absolute;
-	top: 20%;
+	top: 15%;
 	width: 100%;
 	height: 50%;
 	background-color: green;
@@ -141,7 +142,7 @@ a:active {
 	position: absolute;
 	top: 20%;
 	width: 100%;
-	height: 130%;
+	height: 135%;
 	background-color: black;
 	opacity: 0.5;
 	z-index: 9;

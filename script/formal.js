@@ -76,19 +76,19 @@ $(function() {
         var popId = $(this).attr("id");
         switch(popId) {
             case "popDiv1":
-                location.href = "monitor.html";
+                location.href = "monitor.php";
                 break;
             case "popDiv2":
-                location.href = "water.html";
+                location.href = "water.php";
                 break;
             case "popDiv3":
-                location.href = "http://google.com";
+                location.href = "events.php";
                 break;
             case "popDiv4":
-                location.href = "setting.html";
+                location.href = "setting.php";
                 break;
             case "popDiv5":
-                location.href = "http://google.com";
+                location.href = "contact.php";
                 break;
         }
     });

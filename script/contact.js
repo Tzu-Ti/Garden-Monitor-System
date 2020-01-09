@@ -1,5 +1,6 @@
 var pokemon = ["Ivysaur", "charmeleon", "wartotle", "bayleef", "quilava", "croconaw"];
 pressSubmit = 0;
+var finished = 0;
 function changePokemon() {
     var randomNumber1 = Math.floor(Math.random() * 80);
 	var randomNumber2 = Math.floor(Math.random() * 100);
@@ -17,6 +18,7 @@ function changePokemon() {
 				changePokemon();
 			}, 500);
 		} else {
+			sendEmail();
 			$("#contactInput").slideToggle(2000);
 			$(".submitDiv").animate({
 				"height": "85%"
@@ -25,14 +27,19 @@ function changePokemon() {
 				"left": "35%",
 				"width": "30%"
 			}, 2000);
-			setTimeout(function() {
-				console.log("send email");
-				sendEmail();
-			}, 3000);
+			checkFinished();
 		}
 	}, 2000);
 };
-
+function checkFinished() {
+	setTimeout(function() {
+		if(finished == 1) {
+			location.href = "index.php";
+		} else {
+			checkFinished();
+		}
+	}, 3000);
+};
 function sendEmail() {
 	var text = $("#contactInput").val();
 	
@@ -45,7 +52,7 @@ function sendEmail() {
 		error: function(){alert('Ajax request failed');},
 		success: function(data){ 
 			alert("Mail sent successful!"); 
-			location.href = "index.php";
+			finished = 1;
 		}
 	});
 }

@@ -2,18 +2,16 @@
 <html style="height: 100%">
 
 <head>
-    <title> Contact Us | Garden Monitor System </title>
+    <title> Features | Garden Monitor System </title>
     <link rel="stylesheet" href="css/formal.css">
-    <link rel="stylesheet" href="css/contact.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
 	<link rel="Shortcit Icon" type="image/x-icon" href="image/logo.ico">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="script/formal.js"></script>
-<script type="text/javascript" src="script/contact.js"></script>
 
 <body class="body">
 	<?php
@@ -26,8 +24,8 @@
         <div class="topLogoDiv">
             <div class="topLogo"></div>
             <div class="topName">
-                <font class="topCompanyName"> WTT MONITOR </font>
-				<font class="topPageName"> Contact Us </font>
+                <font class="topCompanyName"> WTT MONITOR </font><br>
+				<font class="topPageName"> Features </font>
             </div>
         </div>
         <div class="topMenu"></div>
@@ -57,21 +55,18 @@
     <div class="popDivShadow"></div>
 
     <div class="withoutHeader">
-        <div class="contactTitle"> What you want to tell me or ask me? Press the Pokemon to send the letter. </div>
-		<textarea id="contactInput" required></textarea>
-        <div class="submitDiv">
-            <div class="big"></div>
-        </div>
+        coming soon...
     </div>
 
     <div id="bottom">
         <div class="bottomTopBorder"></div>
         <div class="bottomLeft">
             <p style="font-weight: bold; margin-top: 0px">Member
-            <p style="margin: 4px 0"> <a href="php/logout.php"> Log Out </a>
-            <p style="margin: 4px 0"> <a href="information.php"> Personal Information </a>
-            <p style="margin: 4px 0"> <a href="modify.php"> Modify Profile </a>
-            <p style="margin: 4px 0"> <a href="http://google.com"> Coming Soon </a>
+                <p style="margin: 4px 0"> <a href="php/logout.php"> Log Out </a>
+                    <p style="margin: 4px 0"> <a href="information.php"> Personal Information </a>
+                    <p style="margin: 4px 0"> <a href="modify.php"> Modify Profile </a>
+                        <p style="margin: 4px 0"> <a href="http://google.com"> Coming Soon </a>
+                            
         </div>
         <div class="bottomRight">
             <div id="copyright">

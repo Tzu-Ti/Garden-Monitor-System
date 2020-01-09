@@ -1,0 +1,148 @@
+.title {
+    position: relative;
+    width: 90%;
+    margin: 5%;
+    border: 3px solid grey;
+    border-radius: 40px;
+    text-align: center;
+    background-color: #E1E8ED;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+.left {
+    position: relative;
+    width: 45%;
+    height: 90%;
+    margin: 2.5% 1.7% 2.5% 2.5%;
+    border: 5px solid grey;
+    border-radius: 40px;
+    filter: drop-shadow(10px 10px 3px rgba(0, 0, 0, 0.7));
+    overflow: hidden;
+
+    float: left;
+}
+.leftInside {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #C5D5EA;
+    overflow: scroll;
+}
+.right {
+    position: relative;
+    width: 45%;
+    height: 90%;
+    margin: 2.5% 2.5% 2.5% 1.7%;
+    border: 5px solid grey;
+    border-radius: 40px;
+    filter: drop-shadow(10px 10px 3px rgba(0, 0, 0, 0.7));
+    overflow: hidden;
+
+    float: right;
+}
+.rightInside {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #C5D5EA;
+    overflow: scroll;
+}
+.waitDiv {
+    position: relative;
+    width: 90%;
+    height: 50%;
+    margin: 5%;
+    background-image: url("../image/waiting.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.insideDiv {
+    position: relative;
+    width: 90%;
+    margin: 5%;
+    border: 3px solid grey;
+    border-radius: 40px;
+    background-color: #E1E8ED;
+    font-family: 'Titillium Web', sans-serif;
+}
+.rightInsideDiv {
+    position: relative;
+    width: 90%;
+    margin: 5%;
+    border: 3px solid grey;
+    border-radius: 40px;
+    background-color: #E1E8ED;
+    font-family: 'Titillium Web', sans-serif;
+}
+.date {
+    position: relative;
+    width: 94%;
+    margin: 2% 3%;
+	font-size: 25px;
+}
+.rightDate {
+    position: relative;
+    width: 94%;
+    margin: 2% 3%;
+	font-size: 25px;
+}
+.line {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: grey;
+}
+.content {
+    position: relative;
+    width: 94%;
+    margin: 2% 3%;
+    font-size: 20px;
+}
+.rightContent {
+    position: relative;
+    width: 94%;
+    margin: 2% 3%;
+    font-size: 20px;
+}
+.time{
+    position: relative;
+    width: 20%;
+    display: inline-block;
+}
+.rightTime{
+    position: relative;
+    width: 20%;
+    display: inline-block;
+}
+.ip {
+    position: relative;
+    width: 40%;
+    display: inline-block;
+}
+.rightIp {
+    position: relative;
+    width: 40%;
+    display: inline-block;
+}
+.event {
+    position: relative;
+    width: 40%;
+    display: inline-block;
+}
+.rightEvent {
+    position: relative;
+    width: 40%;
+    display: inline-block;
+}
+.overDiv {
+    position: relative;
+    width: 90%;
+    font-size: 20px;
+    text-align: center;
+    margin: 0% 5% 200px 5%;
+    border: 3px solid grey;
+    border-radius: 40px;
+    background-color: #E1E8ED;
+    font-family: 'Titillium Web', sans-serif;
+}

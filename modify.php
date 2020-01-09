@@ -2,9 +2,9 @@
 <html style="height: 100%">
 
 <head>
-    <title> Contact Us | Garden Monitor System </title>
+    <title> Modify Profile | Garden Monitor System </title>
     <link rel="stylesheet" href="css/formal.css">
-    <link rel="stylesheet" href="css/contact.css">
+	<link rel="stylesheet" href="css/modify.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
 	<link rel="Shortcit Icon" type="image/x-icon" href="image/logo.ico">
@@ -13,7 +13,7 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="script/formal.js"></script>
-<script type="text/javascript" src="script/contact.js"></script>
+<script type="text/javascript" src="script/modify.js"></script>
 
 <body class="body">
 	<?php
@@ -26,8 +26,8 @@
         <div class="topLogoDiv">
             <div class="topLogo"></div>
             <div class="topName">
-                <font class="topCompanyName"> WTT MONITOR </font>
-				<font class="topPageName"> Contact Us </font>
+                <font class="topCompanyName"> WTT MONITOR </font><br>
+				<font class="topPageName"> Modify Profile </font>
             </div>
         </div>
         <div class="topMenu"></div>
@@ -56,12 +56,42 @@
     </div>
     <div class="popDivShadow"></div>
 
-    <div class="withoutHeader">
-        <div class="contactTitle"> What you want to tell me or ask me? Press the Pokemon to send the letter. </div>
-		<textarea id="contactInput" required></textarea>
-        <div class="submitDiv">
-            <div class="big"></div>
-        </div>
+    <div class="withoutHeader" style="min-height: 900px; max-height: 1000px">
+		<div class="title"> Only input the box which you want change. </div>
+		<div class="inputDiv">
+			<div class="labelDiv">
+				<label for="name"> Name </label> <br>
+				<label for="password"> New Password </label> <br>
+				<label for="password2"> Comfirm Password </label> <br>
+				<label for="email"> Email </label> <br>
+				<label for="birth"> Birthday </label> <br>
+				<label for="pokemon"> Pokemon </label>  <br>
+				<label for="oldPassword"> Current Password </label>
+			</div>
+			<div class="boxDiv">
+				<form id="modifyForm" method="post" action="php/uploadModify.php">
+					<input type="text" id="name" name="name" class="inputClass" required /> <br>
+					<input type="password" id="password" name="password" class="inputClass" required /> <br>
+					<input type="password" id="password2" name="password2" class="inputClass" required /> <br>
+					<input type="email" id="email" name="email" class="inputClass" required /> <br>
+					<input type="date" id="birth" name="birth" class="inputClass" required /> <br>
+					<input type="text" id="pokemon" name="pokemon" class="inputClass" placeholder="Press the Pokemon below" required /> <br>
+					<input type="password" id="oldPassword" name="oldPassword" class="inputClass" required placeholder="Input your current password before submit" />
+				</form>
+			</div>
+		</div>
+		<div class="pokemonDiv">
+			<div class="pokemonSmall" id="pokemon1"></div>
+			<div class="pokemonSmall" id="pokemon2"></div>
+			<div class="pokemonSmall" id="pokemon3"></div>
+			<div class="pokemonSmall" id="pokemon4"></div>
+			<div class="pokemonSmall" id="pokemon5"></div>
+			<div class="pokemonSmall" id="pokemon6"></div>
+		</div>
+		<div class="submitDiv">
+			<button id="refill" class="buttonRE"> Refill </button>
+			<button id="submit" class="button" onclick="formSubmit()"> Submit </button>
+		</div>
     </div>
 
     <div id="bottom">

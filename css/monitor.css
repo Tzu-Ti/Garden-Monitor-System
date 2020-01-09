@@ -1,28 +1,134 @@
+.cameraName {
+	position: relative;
+	margin-left: 15px;
+	height: 55px;
+	font-family: 'Titillium Web', sans-serif;
+	letter-spacing: 2px;
+	font-size: 2.5em;
+	font-weight: bold;
+}
 #screen {
-	position: absolute;
-	margin: 10% 20% 10% 20%;
-	width: 60%;
-	height: 60%;
-	background-image: url("../image/landscape.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+	position: relative;
+	float: left;
+	margin: 15px;
+	width: 640px;
+	height: 480px;
+	border: 1px black solid;
+	box-shadow: 10px 5px 5px grey;
 }
-#left-arrow {
-	position: absolute;
-	top: 40%;
-	left: 2%;
-	width: 180px;
-	height: 180px;
-	background-image: url("../image/arrow.png");
-	background-repeat: no-repeat;
-	transform: scaleX(-1);
+.vertical {
+	position: relative;
+	float: left;
+	margin: 15px 15px;
+	width: 10px;
+	height: 480px;
+	text-align: center;
 }
-#right-arrow {
+.up {
+	position: relative;
+	width: 10px;
+	height: 20px;
+	cursor: pointer;
+}
+.verticalLine {
+	position: relative;
+	width: 10px;
+	height: 440px;
+}
+.verticalDiv {
+	height: 108px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+.down {
+	position: relative;
+	width: 10px;
+	height: 20px;
+	cursor: pointer;
+}
+.horizontal {
 	position: absolute;
-	top: 40%;
-	right: 2%;
-	width: 180px;
-	height: 180px;
-	background-image: url("../image/arrow.png");
-	background-repeat: no-repeat;
+	top: 565px;
+	margin: 15px;
+	width: 640px;
+	height: 10px;
+}
+.left {
+	position: relative;
+	width: 20px;
+	height: 10px;
+	float: left;
+	cursor: pointer;
+}
+.horizontalLine {
+	position: relative;
+	width: 598px;
+	height: 8px;
+	float: left;
+}
+.horizontalDiv {
+	width: 44px;
+	height: 8px;
+	border: 1px solid black;
+	cursor: pointer;
+	float: left;
+}
+.right {
+	position: relative;
+	width: 20px;
+	height: 10px;
+	float: left;
+	cursor: pointer;
+}
+.home {
+	position: absolute;
+	top: 565px;
+	left: 670px;
+	width: 40px;
+	height: 40px;
+	border: 1px black solid;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.littleHome {
+	position: relative;
+	margin: 9px;
+	width: 20px;
+	height: 20px;
+	border: 1px black solid;
+	border-radius: 50%;
+}
+#img {
+	height: 100%;
+	
+}
+#pub {
+    position: relative;
+    border: 3px grey solid;
+    border-radius: 40px;
+    background-color: rgb(145, 255, 231);
+    margin: 1%;
+    width: 15%;
+    height: 12%;
+    float: left;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+#shadow {
+    position: relative;
+    margin: 1%;
+    width: 15%;
+    height: 22%;
+    float: left;
+    background-color: black;
+    opacity: 0.5;
+    border: 3px grey solid;
+    border-radius: 40px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    display: none;
+    color: white;
 }

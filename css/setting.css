@@ -1,0 +1,79 @@
+.fourDiv {
+	position: absolute;
+	top: 25%;
+	width: 17%;
+	height: 50%;
+	cursor: pointer;
+	color: white;
+	text-align: center;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+}
+#Div1 {
+	left: 10%;
+	background-image: url("../image/pokemon/Bulbasaur.jpg");
+	background-size: cover;
+}
+#Div1:hover {
+	transform: scale(1.3, 1.3);
+	transition: 0.7s;
+	overflow: hidden;
+	color: black;
+	font-size: 2.5em;
+}
+#Div2 {
+	left: 31%;
+	background-image: url("../image/pokemon/Charmander.jpg");
+	background-size: cover;
+}
+#Div2:hover {
+	transform: scale(1.3, 1.3);
+	transition: 0.7s;
+	overflow: hidden;
+	color: black;
+	font-size: 2.5em;
+}
+#Div3 {
+	right: 31%;
+	background-image: url("../image/pokemon/waterfall.jpg");
+	background-size: cover;
+}
+#Div3:hover {
+	transform: scale(1.3, 1.3);
+	transition: 0.7s;
+	overflow: hidden;
+	color: black;
+	font-size: 2.5em;
+}
+#Div4 {
+	right: 10%;
+	background-image: url("../image/pokemon/winter.jpg");
+	background-size: cover;
+}
+#Div4:hover {
+	transform: scale(1.3, 1.3);
+	transition: 0.7s;
+	overflow: hidden;
+	color: black;
+	font-size: 2.5em;
+}
+.shadow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 50%;
+	
+}
+.shadow:hover {
+	opacity: 0%;
+	transition: 0.7s;
+	z-index: 10;
+}
+.titleDiv {
+	position: relative;
+	width: 50%;
+	height: 30%;
+	top: 35%;
+}

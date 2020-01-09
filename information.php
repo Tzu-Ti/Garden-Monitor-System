@@ -2,9 +2,9 @@
 <html style="height: 100%">
 
 <head>
-    <title> Contact Us | Garden Monitor System </title>
+    <title> Information | Garden Monitor System </title>
     <link rel="stylesheet" href="css/formal.css">
-    <link rel="stylesheet" href="css/contact.css">
+	<link rel="stylesheet" href="css/information.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
 	<link rel="Shortcit Icon" type="image/x-icon" href="image/logo.ico">
@@ -13,7 +13,6 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="script/formal.js"></script>
-<script type="text/javascript" src="script/contact.js"></script>
 
 <body class="body">
 	<?php
@@ -21,13 +20,24 @@
 		if(!isset($_SESSION['is_login']) && !($_SESSION['is_login'] == true)) {
 			echo("<script> alert('Login First!!!'); location.href='../index.php';</script>");
 		}
+		
+		include("php/mysql.php");
+		$sql = "SELECT * FROM `account` WHERE `account` LIKE '".$_SESSION['account']."'";
+		$results = mysqli_query($conn, $sql) or die("No this E-mail");
+		$result = mysqli_fetch_array($results);
+		
+		$_SESSION['account'] = $result['account'];
+		$_SESSION['name'] = $result['name'];
+		$_SESSION['email'] = $result['email'];
+		$_SESSION['birth'] = $result['birthday'];
+        $_SESSION['pokemon'] = $result['pokemon'];
 	?>
     <header class="header">
         <div class="topLogoDiv">
             <div class="topLogo"></div>
             <div class="topName">
-                <font class="topCompanyName"> WTT MONITOR </font>
-				<font class="topPageName"> Contact Us </font>
+                <font class="topCompanyName"> WTT MONITOR </font><br>
+				<font class="topPageName"> Personal Information </font>
             </div>
         </div>
         <div class="topMenu"></div>
@@ -55,13 +65,46 @@
         </div>
     </div>
     <div class="popDivShadow"></div>
-
     <div class="withoutHeader">
-        <div class="contactTitle"> What you want to tell me or ask me? Press the Pokemon to send the letter. </div>
-		<textarea id="contactInput" required></textarea>
-        <div class="submitDiv">
-            <div class="big"></div>
+        <div class="content">
+		    <div class="big" style="background-image: url('image/pokemon/<?php echo $_SESSION['pokemon'] ?>.png')"></div>
         </div>
+		<div class="information">
+			<table border='1' class="table">
+				<tr>
+					<td style="font-weight: bold"> Name </td>
+					<td> 
+						<?php
+							echo $_SESSION['name'];
+						?>
+					</td>
+				</tr>
+				<tr>
+					<td style="font-weight: bold"> Account </td>
+					<td> 
+						<?php
+							echo $_SESSION['account'];
+						?>
+					</td>
+				</tr>
+				<tr>
+					<td style="font-weight: bold"> E-mail </td>
+					<td> 
+						<?php
+							echo $_SESSION['email'];
+						?>
+					</td>
+				</tr>
+				<tr>
+					<td style="font-weight: bold"> Birthday </td>
+					<td> 
+						<?php
+							echo $_SESSION['birth'];
+						?>
+					</td>
+				</tr>
+			</table>
+		</div>
     </div>
 
     <div id="bottom">

@@ -1,0 +1,177 @@
+.title {
+	text-align: center;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20px;
+}
+.inputDiv {
+	position: relative;
+	width: 70%;
+	margin: 1% auto 0px auto;
+	height: 35%;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+}
+.labelDiv {
+	position: relative;
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+.boxDiv {
+	position: relative;
+	width: 60%;
+	height: 100%;
+	float: left;
+}
+.inputClass {
+	width: 100%;
+	height: 25px;
+	font-size: 25px;
+}
+.pokemonDiv {
+	position: relative;
+	margin: 30px auto 0px auto;
+	width: 80%;
+	height: 50%;
+}
+.pokemonSmall {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border: 3px grey solid;
+	border-radius: 50%;
+	cursor: pointer;
+}
+#pokemon1 {
+	top: -10px;
+	left: 0%;
+	background-image: url("../image/pokemon/bulbasaur.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#pokemon2 {
+	position: relative;
+	top: -10px;
+	margin: 0px auto;
+	background-image: url("../image/pokemon/charmander.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#pokemon3 {
+	top: -10px;
+	right: 0%;
+	background-image: url("../image/pokemon/squirtle.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#pokemon4 {
+	left: 0%;
+	background-image: url("../image/pokemon/chikorita.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#pokemon5 {
+	position: relative;
+	margin: 0px auto;
+	background-image: url("../image/pokemon/cyndaquil.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#pokemon6 {
+	top: 205px;
+	right: 0%;
+	background-image: url("../image/pokemon/totodile.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.submitDiv {
+	text-align: center;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 24px;
+}
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 1px solid #3e7bad;
+    border-radius: 8px;
+    background: #65c9ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#65c9ff), to(#3e7bad));
+    background: -moz-linear-gradient(top, #65c9ff, #3e7bad);
+    background: linear-gradient(to bottom, #65c9ff, #3e7bad);
+    -webkit-box-shadow: #6ad2ff 0px 0px 10px 0px;
+    -moz-box-shadow: #6ad2ff 0px 0px 10px 0px;
+    box-shadow: #6ad2ff 0px 0px 10px 0px;
+    text-shadow: #2c587c 2px 2px 1px;
+    font: normal normal bold 24px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:hover,
+.button:focus {
+    border: 1px solid ##58aff7;
+    background: #79f1ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#79f1ff), to(#4a94d0));
+    background: -moz-linear-gradient(top, #79f1ff, #4a94d0);
+    background: linear-gradient(to bottom, #79f1ff, #4a94d0);
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:active {
+    background: #3e7bad;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e7bad), to(#3e7bad));
+    background: -moz-linear-gradient(top, #3e7bad, #3e7bad);
+    background: linear-gradient(to bottom, #3e7bad, #3e7bad);
+}
+
+
+.buttonRE {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 17px;
+    border: 1px solid #6f7175;
+    border-radius: 8px;
+    background: #b6bac0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#b6bac0), to(#6f7175));
+    background: -moz-linear-gradient(top, #b6bac0, #6f7175);
+    background: linear-gradient(to bottom, #b6bac0, #6f7175);
+    -webkit-box-shadow: #bec2c8 0px 0px 40px 0px;
+    -moz-box-shadow: #bec2c8 0px 0px 40px 0px;
+    box-shadow: #bec2c8 0px 0px 40px 0px;
+    text-shadow: #4f5154 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.buttonRE:hover,
+.buttonRE:focus {
+    border: 1px solid ##9ea2a7;
+    background: #dadfe6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dadfe6), to(#85888c));
+    background: -moz-linear-gradient(top, #dadfe6, #85888c);
+    background: linear-gradient(to bottom, #dadfe6, #85888c);
+    color: #ffffff;
+    text-decoration: none;
+}
+.buttonRE:active {
+    background: #6f7175;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6f7175), to(#6f7175));
+    background: -moz-linear-gradient(top, #6f7175, #6f7175);
+    background: linear-gradient(to bottom, #6f7175, #6f7175);
+}
+.buttonRE:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEyElEQVRIia2Va2xTZRjHf+fSrbRbYTh3010YY0Ecg8UoIETJ5APRDAYqfFliMqIJIpcgiSFZREOMH4xRol8MJCgYYzSBqENuMcIYlxmGLhtzA9Z1967b2q7t2p6257x+OGdQjSEu8UmenJw37/n/n///fc77KMwx6isoWFvI6ifmkyuniI1rxOaK8dC4tC//uBi7Ioy+MyJw6UOt8/PNV7/bntlYaMf+vxBc2F34vZgZFiI8JER4WIioV4jRy6Lv2JbeT2pZ98/98pwZhAAtaGUAZnxgy6F8yweVr7/73q8nXnE0pm9X567BgEQIdAMQJqHJjHPJBvXl3frRYPiwb895mgGUucI3rBDbyueHl0naFGS6QE+BHgM9DqkotgUlUnFWZEPbjd4vh2aIKtW5ZD1XREW3n4BZ3sNj06LkNqevc1mkqwXJfY7MhY+APQdSUUjFITlDdmGpMz9w1fjmlvaL8tlm9jUdbDi94/lHG1+rkVZvLJ5eoM2IaE8Av+nB32NtKetddparKmo8rpFy/4azsAhsDkjFTDUCpITv8WNnh76QTm7lcMPeXU04S028RIDkpJuhwUHP9NhQq7t/9OLxNtF6pg+PpTAXKFuaS+UbT7HjxSXUFpcX4Fi3E3TdKkmgjXexcc/pFWo0QRK/G2Tn/YJtOaWUL1xURo1RVpMKNtS9OsTw6Mi98KS35fadiYtHr9B6aZBb+8/z82CIQ++4vPsc2iBIDvPQdci021icS4l628c9ERxAyi4GYTxwRRZmE8uCjNxCyvMeq0A2KlbUTjdu3e412tu7Lqx7P/TSp9c5tHE56wsM/0rQTAJDgqk2ZAVZvTpMT8Q/QXZewCSQhNlbae1nPoRpkAx2yS9nTIUqzTdCsmteD7K2El0zwf3doA2AAmq3l2GfPxTK1vwuMB6AK2ngzKoxEKN38d0YJzxjdlzTC1Q9syZ/E8Y06EkI3QPNDzKkkhhqzCA4FdQGFwe6q8jKBRRThSxM/PtKdPQ+D972KKMaoa86+OhoA7X1dTnH5+dlOtD6IDaBeQAQ9cFIiEkVSPijuImPVWF4weEEuwMkG8hSWoPqiDxw1KgY4yLYtFp5u3yRrVJRk5C4a9prs0xLwEA/oevDeFSA8QjdqGxCFUAE9AikAFk2U5FAAtUFOTmw6klKEEkQCVNlpln4bMZuQ4ePlnAcnwrQ4eV3AUgq5u2kYlajGlZaa4qVkpVYf4ZhgRuQ6oTREVInOjgCGCrA5X7uxDRwuCwAmykTAWSlrSkWUfodLCwCDZLXwOeGZg9fn/2TFqztdI0x7AsTKivAhQ3ENPjbTVtzykBZDuSnkchpCjQQ/RBphUAcrvho2f8TB60STYKETnAihKfMRrUYg4luGBFEFZAjHuxON2QVQeZSkAsAO4gU6JMQvQPTg5AQ0Ozh1IEf2WsYeGcFzs6D1PQUbr2Lat8E9KfwHjjHTv8M8bfWsmtNEbX5fhxqG6jzQLE6mRREkhi3/PQcu8mR5k6+BUJpBj4YOCMxusaD1P8RpevN0+wYmOImYOw+RWuWnWV1VdSuKuHpXCcFGSpyWCPUO0HPD51c7vVyDfDxsOu+rppnP67npCODCv59lMqmObisdDDHiSgDGXP54L/EX5ztNQw3UOoSAAAAAElFTkSuQmCC") no-repeat left center transparent;
+    background-size: 100% 100%;
+}

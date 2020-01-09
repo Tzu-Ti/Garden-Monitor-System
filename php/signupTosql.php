@@ -13,5 +13,6 @@
     
 	$sql = "INSERT INTO `account` (`name`, `account`, `password`, `email`, `birthday`, `pokemon`) VALUES ('$name', '$account', '$password', '$email', '$birth', '$pokemon');";
     $results = mysqli_query($conn, $sql) or die("Sign up failed");
-	
-?>
+    
+    mysqli_close($conn);
+?>      

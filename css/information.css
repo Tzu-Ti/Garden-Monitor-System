@@ -1,0 +1,30 @@
+.content {
+	position: relative;
+	width: 400px;
+	height: 400px;
+	box-sizing: border-box;
+	padding: 5px;
+	margin: 3% auto;
+	border-radius: 50%;
+	background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);  
+}
+.big {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-position: center;
+	background-repeat: no-repeat; 
+	background-size: contain; 
+}
+.information {
+	position: relative;
+	width: 70%;
+	height: 30%;
+	margin: 0px auto;
+}
+.table {
+	width: 100%;
+	height: 100%;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 2.2em;
+}

@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/signup.css">
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+		<link rel="Shortcit Icon" type="image/x-icon" href="image/logo.ico">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     </head>
 
@@ -201,10 +202,10 @@
             <div class="bottomTopBorder"></div>
             <div class="bottomLeft">
                 <p style="font-weight: bold; margin-top: 0px">Member
-                <p style="margin: 4px 0"> <a href="http://google.com"> Sign In </a>
-                <p style="margin: 4px 0"> <a href="http://google.com"> Sign Up </a>
-                <p style="margin: 4px 0"> <a href="http://google.com"> Forgot Password </a>
-                <p style="margin: 4px 0"> <a href="http://google.com"> Modify Profile </a>
+                <p style="margin: 4px 0"> <a href="php/logout.php"> Log Out </a>
+                <p style="margin: 4px 0"> <a href="information.php"> Personal Information </a>
+                <p style="margin: 4px 0"> <a href="modify.php"> Modify Profile </a>
+                <p style="margin: 4px 0"> <a href="http://google.com"> Coming Soon </a>
             </div>
             <div class="bottomRight">
                 <div id="copyright">
